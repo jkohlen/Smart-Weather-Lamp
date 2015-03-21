@@ -22,7 +22,7 @@ Weather Lamp Colors
      
      •	White  -- All clear
    
-To get accurate weather information it, for example, uses the specific latitude and longitude from your SmartThings Hub to take advantage of weather micro-targeting API at forecast.io that powers the App DarkSky.  They believe they can predict when it will rain — down to the minute — at your exact location.  
+To get accurate weather information it, for example, uses the specific latitude and longitude from your SmartThings Hub to take advantage of weather micro-targeting API at forecast.io that powers the App DarkSky.  They believe they can predict when it will rain — down to the minute — at your exact location.  To use the forecast.io API for your weather forecast, visit https://developer.forecast.io/register, register to get an API key, and insert it on line 129 of the groovy script.
 
 If there is a weather emergency, the app can send you a text message to warn you.  
 
