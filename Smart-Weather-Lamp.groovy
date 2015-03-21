@@ -130,10 +130,10 @@ def checkForWeather() {
 		if (response.data) {
        		def precipprob = response.data.currently.precipProbability.floatValue() // A numerical value between 0 and 1 (inclusive) representing the probability of precipitation occurring at the given time. 
 			def tempFar = response.data.currently.temperature.floatValue()
-			def thisHour = response.data.minutely.data[0].precipProbability.floatValue() //this top of hour  	
-			def nextHour = response.data.minutely.data[1].precipProbability.floatValue() //next top of hour
+			def thisHour = response.data.hourly.data[0].precipProbability.floatValue() //this top of hour  	
+			def nextHour = response.data.hourly.data[1].precipProbability.floatValue() //next top of hour
 			log.debug "Actual current temp: ${tempFar}, Precipitation probability now: ${precipprob}, thisHour: ${thisHour}, nextHour ${nextHour}"
-    		if ((thisHour >15) || (nextHour >15)) {
+    		if ((thisHour >0.15) || (nextHour >0.15)) {
 	    		color = "Purple" 
     	    	log.debug "Greater than 15% chance of rain in this or the next hour, setting light to Purple."
     		}
