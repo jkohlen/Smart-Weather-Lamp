@@ -125,6 +125,7 @@ def checkForWeather() {
  
     //	PURPLE RAIN FORCAST
 	log.debug "Checking Forecast.io Weather"
+	// Visit https://developer.forecast.io/register to get a forecast.io API key and insert it below
     httpGet("https://api.forecast.io/forecast/8b533da63e8dc7e74a1aa20acaf8ac13/$location.latitude,$location.longitude") {response -> 
             
 		if (response.data) {
